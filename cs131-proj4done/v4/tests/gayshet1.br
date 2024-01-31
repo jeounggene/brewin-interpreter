@@ -1,0 +1,34 @@
+func main() {
+  a = @;
+  a.x = 2;
+  b = @;
+  b.proto = a;
+  a.lam = lambda() {
+    if (this.x > 0) {
+      this.x = this.x - 1;
+
+      print(this.x);
+      b.lam();
+    }
+
+    test = lambda() {
+
+      print(this.x);
+    };
+    test();
+  };
+  a.lam();
+
+  print(a.x);
+}
+
+/*
+*OUT*
+1
+0
+0
+0
+1
+1
+*OUT*
+*/

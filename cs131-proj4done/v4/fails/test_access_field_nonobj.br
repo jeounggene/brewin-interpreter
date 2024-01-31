@@ -1,0 +1,17 @@
+func foo(a) {
+    print(a);
+}
+
+func main() {
+    x = @;
+    x.y = 10;
+    x.f = foo;
+    x = 5;
+    print(x.f("10"));
+}
+
+/*
+*OUT*
+ErrorType.TYPE_ERROR
+*OUT*
+*/

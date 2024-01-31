@@ -1,0 +1,10 @@
+func main() {
+    p = 5;
+    p.f = 7;
+}
+
+/*
+*OUT*
+ErrorType.TYPE_ERROR
+*OUT*
+*/
